@@ -1,9 +1,10 @@
 package Lesson1;
-
+import java.util.Scanner;
 public class Homework1 {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -41,5 +42,36 @@ public class Homework1 {
             }
         }
         System.out.println();
+    }
+
+    public static void task3() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(" Введите первое число:");
+        double num1 = scanner.nextDouble();
+        System.out.print(" Введите оператор( +,-,*,/):");
+        char operator = scanner.next().charAt(0);
+        System.out.print(" Введите второе число:");
+        double num2 = scanner.nextDouble();
+
+        double result = 0;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println(" Некорректный оператор");
+                return;
+        }
+        System.out.println(" Результат:" + result);
+        scanner.close();
     }
 }

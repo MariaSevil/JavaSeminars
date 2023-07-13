@@ -1,7 +1,6 @@
 package Lesson5;
 import java.util.*;
 public class HomeWork5 {
-    public class PhoneBook {
         public static void main(String[] args) {
             // Создаем HashMap для хранения записей в телефонной книге
             HashMap<String, List<String>> phoneBook = new HashMap<>();
